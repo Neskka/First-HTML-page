@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Lento</title>
+    <link rel="stylesheet" href="../CSS/style2.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header>
+    <div class="pasek">
+        <div class="logo">
+            <img src="../zdjecia/logo.png" alt="">
+        </div>
+        <div class="separator">
+            <span class="separator-text"><p>Wirtualna</p><p>adopcja</p></span>
+        </div>
+        <nav>
+            <ul id="nav">
+                <li><a href="../indeks.html">Strona główna</a></li>
+                <li><a href="../psy.html">Psy do adopcji</a></li>
+                <li><a href="../adoptowane.html">Adoptowane psy</a></li>
+                <li><a href="">Informacje</a>
+                    <ul>
+                        <li><a href="../onas.html" >O nas</a></li>
+                        <li><a href="../kontakt.html" >Kontakt</a></li>
+                    </ul>
+                </li>
+                <li><a href="../moje.html">Moje adopcje</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="test">
+        <div class="tresc">
+            <h3 id="dname">Lento</h3>
+            <img src="../zdjecia/Lento/lento1.jpg">
+            <table>
+                <tbody>
+                <tr>
+                    <td><strong>Płeć</strong></td>
+                    <td>Piesek</td>
+                </tr>
+                <tr>
+                    <td><strong>Wiek</strong></td>
+                    <td>ok. 1,5 roku</td>
+                </tr>
+                <tr>
+                    <td><strong>Wielkość</strong></td>
+                    <td>Mały</td>
+                </tr>
+                <tr>
+                    <td><strong>Waga</strong></td>
+                    <td>ok. 12 kg</td>
+                </tr>
+                <tr>
+                    <td><strong>Wysokość w kłębie</strong></td>
+                    <td>ok. 38 cm</td>
+                </tr>
+                <tr>
+                    <td><strong>Sierść</strong></td>
+                    <td>Długa/mieszana</td>
+                </tr>
+                <tr>
+                    <td><strong>Status</strong></td>
+                    <td>Do adopcji</td>
+                </tr>
+                </tbody>
+            </table>
+            <p>Lento jest przyjaznym, niestrachliwym i bardzo śmiałym pieskiem. Przypuszczamy, że żył w mieście, bo nie boi się przejeżdżających aut i dużych skupisk ludzi czy psów. Radośnie wita każdego człowieka, a w boksie staje na dwóch łapkach i szczeka, chcąc zwrócić na siebie uwagę. Ma dobre relacje z psami ze swojego kojca, na spacerach też jest spokojny wobec psów, chyba, że są duże. Takich się boi i szczeka na nie. Lento ładnie chodzi na smyczy i bardzo lubi spacery u boku człowieka. Powinien wpasować się w rodzinkę z dziećmi, oczywiście takimi, które potrafią szanować psie granice. Lento to typ pieszczocha, który będzie wiernie podążał za Tobą.</p>
+        </div>
+        <div class="zdjecia">
+            <div class="gallery">
+                <img src="../zdjecia/Lento/lento2.jpg" class="thumbnail">
+                <img src="../zdjecia/Lento/lento3.jpg" class="thumbnail">
+                <img src="../zdjecia/Lento/lento4.jpg" class="thumbnail">
+                <img src="../zdjecia/Lento/lento5.jpg" class="thumbnail">
+            </div>
+
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImage">
+                <div id="caption"></div>
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            </div>
+        </div>
+
+        <div class="przyciski">
+            <button id="openModalBtn" class="button">Adoptuj</button>
+            <div id="myModal1" class="modal1">
+                <img src="../zdjecia/piesformularz.png">
+                <div class="modal-content1">
+                    <span class="close1">&times;</span>
+                    <form id="myForm">
+                        <div class="form-group">
+                            <label for="fname">Imię:</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Twoje imię">
+                            <span class="error" id="fnameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="lname">Nazwisko:</label>
+                            <input type="text" id="lname" name="lastname" placeholder="Twoje nazwisko">
+                            <span class="error" id="lnameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="dogName">Imię psa:</label>
+                            <input type="text" id="dogName" name="dogname" placeholder="Imię psa" readonly="readonly">
+                            <span class="error" id="dogNameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail:</label>
+                            <input type="text" id="email" name="email" placeholder="E-mail">
+                            <span class="error" id="emailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefon">Telefon:</label>
+                            <input type="text" id="telefon" name="telefon" placeholder="Telefon">
+                            <span class="error" id="telefonError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="haslo">Hasło:</label>
+                            <input type="password" id="haslo" name="haslo" placeholder="Hasło">
+                            <span class="error" id="hasloError"></span>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="regulamin" class="regulamin" name="regulamin">
+                            <label for="regulamin">Jestem świadomy/a, że wirtualna adopcja tego psa zobowiązuje mnie do regularnego wsparcia finansowego, które zostanie przeznaczone na karmę, leczenie, szczepienia oraz inne niezbędne potrzeby zwierzaka.</label>
+                            <span class="error" id="regulaminError"></span>
+                        </div>
+                        <input type="submit" value="Wyślij">
+                        <input type="reset" id="clearButton" value="Wyczyść">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</main>
+
+<script src="../JS/script.js"></script>
+<script src="../JS/script2.js"></script>
+<footer class="footer">
+    <p><div class="footer-item"><img src="../zdjecia/paw.png"><strong>Wirtualna adopcja</strong></div></p>
+    <p><div class="footer-item"><img src="../zdjecia/dom.png">Nowodwór, 21-100 Lubartów</div></p>
+    <p><div class="footer-item"><img src="../zdjecia/telefon.png"> 535 987 990</div></p>
+    <p><div class="footer-item"><img src="../zdjecia/email.png"> <a href="mailto:aga.marzeda@o2.pl">aga.marzeda@o2.pl</a></div></p>
+    <div class="footer-item"><img src="../zdjecia/money.png"> PL 12 3456 7890 1234 5678 9012 3456</div>
+    <div class="stopka">&copy;AM</div>
+</footer>
+
+</body>
+</html>
